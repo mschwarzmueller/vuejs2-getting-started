@@ -1,6 +1,7 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
 <div id="app">
+    <button v-on:click="changeTitle">Change Title</button>
     <p>{{ title }}</p>
 </div>
 
@@ -9,6 +10,11 @@
         el: '#app',
         data: {
             title: 'Hello World!'
+        },
+        methods: {
+            changeTitle() {
+                this.title = 'Changed Title';
+            }
         }
     });
 </script>
