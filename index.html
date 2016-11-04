@@ -1,27 +1,26 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
 <div id="app">
-    <button v-on:click="increment">Increment</button>
-    <p>Counter: {{ counter }}</p>
-    <p>Clicks: {{ clicks }}</p>
+    <button v-on:click="show = !show">Show / Hide</button>
+    <p v-if="show">I'm part-time visible!</p>
+    <p v-else>Am I visible?</p>
+    <p v-show="show">Hurray, I'm here!</p>
+    <hr>
+    <ul>
+        <li v-for="(person, index) in persons">{{ person.name }} - {{ index }}</li>
+    </ul>
 </div>
 
 <script>
     new Vue({
         el: '#app',
         data: {
-            counter: 0,
-            clicks: 0
-        },
-        methods: {
-            increment() {
-                this.clicks++;
-            }
-        },
-        computed: {
-            counter() {
-                return this.clicks * 2;
-            }
+            show: true,
+            persons: [
+                {name: 'Max', age: 27},
+                {name: 'Chris', age: 30},
+                {name: 'Nora', age: 25}
+            ]
         }
     });
 </script>
