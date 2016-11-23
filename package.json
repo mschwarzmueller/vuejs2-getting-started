@@ -1,7 +1,7 @@
 {
   "name": "vue-webpack",
   "description": "A Vue.js project",
-  "author": "Maximilian Schwarzmüller <mblacky0@gmail.com>",
+  "author": "Maximilian Schwarzmüller",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
